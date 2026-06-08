@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende | EcoOmetepe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body { background: #f4f7f6; min-height: 100vh; display: flex; flex-direction: column; font-family: sans-serif; }
+
+        /* Menú unificado */
+        .navbar { background-color: #2e7d32 !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important; padding: 12px 0 !important; }
+        .navbar-brand { font-size: 1.6rem; color: #ffffff !important; font-weight: bold; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; margin: 0 8px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #ffffff !important; background: rgba(255,255,255,0.1); border-radius: 5px; }
+        .btn-contacto { background: #ff9800 !important; color: white !important; border-radius: 8px !important; }
+
+        /* Contenido y Animaciones */
+        .hero-custom { background: linear-gradient(135deg, #198754 0%, #0f5132 100%); color: white; padding: 60px 20px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card { transition: 0.4s; border: none; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); background-color: #ffffff; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px rgba(0,0,0,0.1); }
+        
+        .card-icon { font-size: 2.5rem; margin-bottom: 15px; transition: transform 0.3s ease; }
+        .card:hover .card-icon { transform: scale(1.2); }
+        
+        .card-flora { border-top: 5px solid #198754; }
+        .card-fauna { border-top: 5px solid #fd7e14; }
+        .card-turismo { border-top: 5px solid #0dcaf0; }
+        
+        footer { background: #212529 !important; color: white !important; padding: 25px 0 !important; margin-top: auto; text-align: center; }
+        footer small { color: #adb5bd; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">EcoOmetepe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="aprende.html">Aprende</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aula.html">Aula</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mapa.html">Mapa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-contacto px-3" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="hero-custom text-center">
+            <h1 class="display-4 fw-bold">Ometepe: Patrimonio Natural</h1>
+            <p class="lead">Descubre la joya ecológica de Nicaragua, un oasis de biodiversidad entre dos volcanes.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4 px-lg-3">
+                <div class="card card-flora p-4 h-100">
+                    <div class="card-icon text-success"><i class="bi bi-flower1"></i></div>
+                    <h4 class="fw-bold">Flora de la Isla</h4>
+                    <p class="text-muted">Ometepe alberga bosques tropicales secos y húmedos. La riqueza de su suelo volcánico permite una vegetación exuberante, incluyendo árboles centenarios de ceiba y diversas especies de orquídeas endémicas.</p>
+                </div>
+            </div>
+            <div class="col-md-4 px-lg-3">
+                <div class="card card-fauna p-4 h-100">
+                    <div class="card-icon text-warning"><i class="bi bi-bug"></i></div>
+                    <h4 class="fw-bold">Fauna Silvestre</h4>
+                    <p class="text-muted">La isla es un corredor biológico vital. Aquí conviven monos congos, caras blancas y una impresionante variedad de aves migratorias que descansan en nuestra reserva cada año.</p>
+                </div>
+            </div>
+            <div class="col-md-4 px-lg-3">
+                <div class="card card-turismo p-4 h-100">
+                    <div class="card-icon text-info"><i class="bi bi-recycle"></i></div>
+                    <h4 class="fw-bold">Turismo Responsable</h4>
+                    <p class="text-muted">Para preservar este paraíso, te invitamos a seguir nuestras prácticas de turismo sostenible: reduce el plástico de un solo uso, respeta los senderos y apoya la economía local.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-5 bg-white rounded shadow-sm border-start border-success border-5 mb-5">
+            <h3 class="text-success fw-bold"><i class="bi bi-info-circle"></i> Dato Curioso</h3>
+            <p class="mb-0">¿Sabías que Ometepe es la única isla en el mundo con dos volcanes unidos por un istmo en medio de un lago de agua dulce? Esto crea un microclima único que no existe en ningún otro lugar del planeta.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2026 EcoOmetepe Web | Educación Ambiental y Conservación Comunitaria</p>
+            <small>Instituto Nacional Robert Drew, Mérida - Proyecto ECOTON 2026</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

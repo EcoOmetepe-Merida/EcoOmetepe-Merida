@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - EcoOmetepe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        body { background: #f4f7f6; font-family: 'Segoe UI', Roboto, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        /* Menú unificado */
+        .navbar { background-color: #2e7d32 !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15); padding: 12px 0; }
+        .navbar-brand, .nav-link, .btn-contacto { font-family: 'Segoe UI', Roboto, sans-serif !important; }
+        .navbar-brand { font-size: 1.6rem; color: #ffffff !important; font-weight: bold; }
+        .nav-link { 
+            color: rgba(255,255,255,0.9) !important; 
+            font-weight: 500 !important; 
+            font-size: 1rem !important; 
+            margin: 0 8px; 
+            transition: 0.3s; 
+        }
+        .nav-link:hover, .nav-link.active { color: #ffffff !important; background: rgba(255,255,255,0.1); border-radius: 5px; }
+        .btn-contacto { background: #ff9800 !important; color: white !important; border-radius: 8px !important; font-weight: 600 !important; }
+
+        /* Estilos de contenido */
+        .card { border: none; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); margin-bottom: 25px; background: #ffffff; }
+        .side-card { background: #ffffff; padding: 25px; border-radius: 20px; text-align: center; border-top: 5px solid #4caf50; }
+        .section-title { color: #1b5e20; font-weight: 800; border-left: 8px solid #4caf50; padding-left: 15px; margin-bottom: 20px; }
+        .mv-card { border-top: 5px solid #2196f3; }
+        .team-card { background: #e8f5e9; border: 2px solid #a5d6a7; }
+        footer { background:#212529; color:white; padding:25px 0; margin-top: auto; text-align:center; }
+    </style>
+</head>
+<body>
+
+<!-- Menú Unificado Corregido -->
+<nav class="navbar navbar-expand-lg sticky-top mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">EcoOmetepe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="aprende.html">Aprende</a></li>
+                <li class="nav-item"><a class="nav-link" href="aula.html">Aula</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="mapa.html">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                <!-- Enlace corregido a reportar.html -->
+                <li class="nav-item"><a class="nav-link btn btn-contacto px-3" href="reportar.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenido -->
+<div class="container px-4">
+    <div class="row">
+        <div class="col-lg-2 mb-4">
+            <div class="side-card shadow-sm">
+                <i class="bi bi-bank" style="font-size: 2.5rem; color: #1b5e20;"></i>
+                <p class="mt-3 small">Instituto Nacional<br><strong>Robert Drew</strong><br>Mérida, Ometepe</p>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card p-4">
+                <h2 class="section-title"><i class="bi bi-info-circle-fill"></i> Nuestra Identidad</h2>
+                <p class="text-dark">EcoOmetepe-Mérida Web es una iniciativa educativa y comunitaria desarrollada por estudiantes del Instituto Nacional Robert Drew, ubicado en Mérida, Isla de Ometepe. Nuestro objetivo es promover la educación ambiental, la conservación de los recursos naturales y el fortalecimiento de la identidad ecológica de nuestra comunidad mediante herramientas digitales innovadoras.</p>
+            </div>
+            
+            <div class="row">
+                <!-- Misión y Visión con espaciado lateral (px-lg-3) para separarlas -->
+                <div class="col-md-6 px-lg-3">
+                    <div class="card mv-card p-4">
+                        <h4 class="section-title" style="border-left-color: #2196f3;"><i class="bi bi-rocket-takeoff-fill" style="color: #2196f3;"></i> Misión</h4>
+                        <p class="text-dark">Promover la educación ambiental y la conservación comunitaria mediante herramientas digitales accesibles para estudiantes, docentes y habitantes de Mérida.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 px-lg-3">
+                    <div class="card mv-card p-4">
+                        <h4 class="section-title" style="border-left-color: #2196f3;"><i class="bi bi-eye-fill" style="color: #2196f3;"></i> Visión</h4>
+                        <p class="text-dark">Ser una plataforma de referencia en educación ambiental y protección de los recursos naturales de la Isla de Ometepe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card team-card p-4 shadow-sm">
+                <h4 class="section-title" style="border-left-color: #2e7d32;">
+                    <i class="bi bi-people-fill"></i> Equipo de Trabajo
+                </h4>
+                <p><strong>Estudiantes:</strong> Algie Valeria Rodríguez Flores, Adriana Jisela Valle Ortiz, Annette Jazmin Flores López, Steysi Janhai Zambrana Raudez.</p>
+                <p><strong>Tutor:</strong> Mtro. Francisco Emilio Mairena Alemán.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+            <div class="side-card shadow-sm">
+                <i class="bi bi-lightbulb-fill" style="font-size: 2.5rem; color: #ff9800;"></i>
+                <h6 class="mt-3" style="color: #e65100;">¿Sabías qué?</h6>
+                <p class="small text-muted">Ometepe es la isla volcánica más grande dentro de un lago de agua dulce en el mundo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p class="mb-0">&copy; 2026 EcoOmetepe Web | Educación Ambiental y Conservación Comunitaria</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

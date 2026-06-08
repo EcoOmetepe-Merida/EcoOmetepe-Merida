@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - EcoOmetepe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+        body { background-color: #f4f7f6; font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        /* Menú unificado (Fijo y Verde) */
+        .navbar { background-color: #2e7d32 !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15); padding: 12px 0; }
+        .navbar-brand { font-size: 1.6rem; color: #ffffff !important; font-weight: bold; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; margin: 0 8px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #ffffff !important; background: rgba(255,255,255,0.1); border-radius: 5px; }
+        .btn-contacto { background: #ff9800 !important; color: white !important; border-radius: 8px !important; }
+
+        /* Estilos de Eventos */
+        .evento-card { background: #ffffff; border: 4px solid #198754; border-radius: 20px; box-shadow: 0 5px 15px rgba(25, 135, 84, 0.1); padding: 25px; height: 100%; transition: transform 0.3s ease; }
+        .evento-card-limpieza { border: 4px solid #0dcaf0; box-shadow: 0 5px 15px rgba(13, 202, 240, 0.1); }
+        .evento-card:hover { transform: translateY(-8px); }
+        .badge-eco { background: #d1e7dd; color: #0f5132; padding: 5px 15px; border-radius: 20px; font-weight: bold; }
+        .interaction-section { background: #ffffff; border: 5px solid #198754; box-shadow: 0 0 25px rgba(25, 135, 84, 0.1); border-radius: 30px; padding: 50px !important; margin-top: 40px; }
+        
+        footer { background:#212529; color:white; padding:25px 0; margin-top: auto; text-align:center; }
+        footer small { color:#adb5bd; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">EcoOmetepe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="aprende.html">Aprende</a></li>
+                <li class="nav-item"><a class="nav-link" href="aula.html">Aula</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="mapa.html">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link active" href="eventos.html">Eventos</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-contacto px-3" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <h2 class="fw-bold text-center mb-5 text-success">Únete a nuestras jornadas</h2>
+    
+    <div class="row g-4">
+        <div class="col-md-6 px-lg-3">
+            <div class="evento-card">
+                <span class="badge-eco">🌱 Reforestación</span>
+                <h4 class="fw-bold mt-3">Taller de Reforestación Nativa</h4>
+                <p class="text-muted">Únete a nosotros para plantar especies nativas en las zonas protegidas del volcán.</p>
+            </div>
+        </div>
+        <div class="col-md-6 px-lg-3">
+            <div class="evento-card evento-card-limpieza">
+                <span class="badge-eco" style="background:#cff4fc; color:#055160;">🌊 Limpieza</span>
+                <h4 class="fw-bold mt-3">Limpieza de Playa Santo Domingo</h4>
+                <p class="text-muted">Limpieza integral para conservar nuestras playas libres de microplásticos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="interaction-section">
+                <div class="text-center mb-5">
+                    <h3 class="fw-bold text-success">¡Tu voz cuenta para el futuro de Ometepe!</h3>
+                    <p class="text-muted">Déjanos tus ideas y forma parte del cambio en nuestro próximo ECOTON 2026.</p>
+                </div>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfWWbgMPmtPkibOpUD1h3vBu73ySkaA3rAIy03QYxAfMgrA0w/viewform?embedded=true">Cargando...</iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p class="mb-0">&copy; 2026 EcoOmetepe Web | Educación Ambiental y Conservación Comunitaria</p>
+        <small>Instituto Nacional Robert Drew, Mérida - Proyecto ECOTON 2026</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

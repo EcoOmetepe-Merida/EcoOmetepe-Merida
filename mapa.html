@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Ecológico | EcoOmetepe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f4f7f6; font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        /* Menú unificado (Fijo y Verde) */
+        .navbar { background-color: #2e7d32 !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15); padding: 12px 0; }
+        .navbar-brand { font-size: 1.6rem; color: #ffffff !important; font-weight: bold; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; margin: 0 8px; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #ffffff !important; background: rgba(255,255,255,0.1); border-radius: 5px; }
+        .btn-contacto { background: #ff9800 !important; color: white !important; border-radius: 8px !important; }
+
+        /* Estilos del Mapa */
+        .map-wrapper { position: relative; display: block; }
+        .map-img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .point { 
+            position: absolute; width: 30px; height: 30px; background: #28a745; 
+            border-radius: 50%; border: 4px solid white; cursor: pointer; 
+            z-index: 10; animation: pulse 2s infinite; 
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { transform: scale(1.2); box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+        }
+        .point:hover { background: #ffc107; transform: scale(1.3); }
+        .info-panel { background: white; border-radius: 15px; padding: 25px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        footer { background:#212529; color:white; padding:20px 0; margin-top: auto; text-align:center; }
+    </style>
+</head>
+<body>
+
+<!-- Menú Unificado -->
+<nav class="navbar navbar-expand-lg sticky-top mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">EcoOmetepe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="aprende.html">Aprende</a></li>
+                <li class="nav-item"><a class="nav-link" href="aula.html">Aula</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="nav-link active" href="mapa.html">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-contacto px-3" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <h1 class="text-center text-success fw-bold mb-5">Mapa Ecológico Interactivo</h1>
+    
+    <div class="row g-4 align-items-start">
+        <div class="col-lg-9">
+            <div class="map-wrapper">
+                <img src="img/13.png" class="map-img" alt="Mapa Ecológico">
+                <div class="point" style="top: 25%; left: 45%;" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal('Volcán Maderas: Punto clave de biodiversidad. Aquí realizamos jornadas de reforestación.')"></div>
+                <div class="point" style="top: 65%; left: 30%;" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal('Humedal Istián: Refugio de aves. EcoOmetepe monitorea la limpieza de esta área.')"></div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 px-lg-3">
+            <div class="info-panel">
+                <h4 class="text-success fw-bold border-bottom pb-2">Lugares de Interés</h4>
+                <ul class="list-unstyled mt-3">
+                    <li class="mb-2">✅ Volcán Maderas</li>
+                    <li class="mb-2">✅ Humedal Istián</li>
+                    <li class="mb-2">✅ Cascada San Ramón</li>
+                    <li class="mb-2">✅ Charco Verde</li>
+                    <li class="mb-2">✅ Ojo de Agua</li>
+                    <li class="mb-2">✅ Parque Ecológico El Quiste</li>
+                </ul>
+                <div class="mt-4 p-3 bg-light rounded border-start border-success border-4">
+                    <h6 class="fw-bold text-success">¿Sabías qué?</h6>
+                    <small>Ometepe alberga más de 300 especies de aves. ¡Actúa hoy por un mañana sostenible!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-body text-center p-4">
+                <h5 id="modalTitle" class="text-success fw-bold mb-3"></h5>
+                <p id="modalCaption" class="text-muted"></p>
+                <button type="button" class="btn btn-success mt-3" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p class="mb-0">&copy; 2026 EcoOmetepe Web | Educación Ambiental y Conservación Comunitaria</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showModal(caption) {
+        const partes = caption.split(':');
+        document.getElementById('modalTitle').innerText = partes[0];
+        document.getElementById('modalCaption').innerText = partes[1] || "";
+    }
+</script>
+</body>
+</html>

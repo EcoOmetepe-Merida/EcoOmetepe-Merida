@@ -1,0 +1,117 @@
+
+/* ==========================================
+   CONFIGURACIONES GLOBALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.fs-7 { font-size: 0.85rem; }
+.bg-light-gray { background-color: #f8f9fa; }
+
+/* BARRA SUPERIOR VERDE */
+.top-bar {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ==========================================
+   SECCIÓN HÉROE (VOLCÁN COMENTADO)
+   ========================================== */
+.hero {
+    min-height: 85vh;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.35), 
+        rgba(255, 255, 255, 0.1)
+    ), 
+    url('img/volcan.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimizeQuality;
+}
+
+/* PALETA DE COLORES */
+.text-dark-green {
+    color: #11361b;
+}
+.text-success-green {
+    color: #1e7e34;
+}
+
+.titulo-principal {
+    font-weight: 800 !important;
+    line-height: 1.1;
+}
+
+.subtitulo {
+    color: #2b4436;
+    max-width: 500px;
+}
+
+/* BOTONES ADAPTADOS */
+.bg-white-trans {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.bg-white-trans:hover {
+    background-color: #ffffff;
+}
+
+/* TARJETA BLUR CON EFECTO CRISTAL FLOTANTE */
+.bg-white-blur {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.bg-success-light {
+    background-color: #e8f5e9;
+}
+
+/* ==========================================
+   TARJETAS INTERACTIVAS INFERIORES
+   ========================================== */
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+}
+
+.bg-success-dark { background-color: #0f5132; }
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* ESTILOS EXTRAS PARA EL MODAL DE LOGIN/REGISTRO */
+.nav-tabs .nav-link.active {
+    background-color: #ffffff !important;
+    border-bottom: 3px solid #1e7e34 !important;
+}
